@@ -83,6 +83,7 @@ $(document).ready(function() {
 
 		//start the slider
 		slideWrapper.slick({
+			arrows: true,
 			dots: true,
 			infinite: true,
 			slidesToShow: 1,

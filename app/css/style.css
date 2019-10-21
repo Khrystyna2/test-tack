@@ -175,9 +175,9 @@ body { margin: 0; position: relative; background-color: #fff; height: 100%; font
 
 .slick-prev, .slick-next { font-size: 0; line-height: 0; position: absolute; top: 50%; width: 24px; height: 43px; padding: 0; cursor: pointer; color: transparent; border: none; outline: none; transform: translate(0%, -50%); -webkit-transform: translate(0%, -50%); -moz-transform: translate(0%, -50%); -ms-transform: translate(0%, -50%); -o-transform: translate(0%, -50%); z-index: 2; }
 
-.slick-next { right: 169px; background: url(../../images/icons/slider-arrow-right.svg) no-repeat center center/contain; }
+.slick-next { right: 169px; background: url(../images/icons/slider-arrow-right.svg) no-repeat center center/contain; }
 
-.slick-prev { left: 169px; background: url(../../images/icons/slider-arrow-left.svg) no-repeat center center/contain; }
+.slick-prev { left: 169px; background: url(../images/icons/slider-arrow-left.svg) no-repeat center center/contain; }
 
 .slick-dots { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: absolute; bottom: 109px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
 
@@ -199,7 +199,7 @@ body { margin: 0; position: relative; background-color: #fff; height: 100%; font
 
 .services__block:last-of-type { margin-bottom: 0; }
 
-.services__image { position: relative; width: 522px; min-width: 522px; height: 522px; background: url(../../images/circle.svg) no-repeat center center/contain; margin-right: 82px; }
+.services__image { position: relative; width: 522px; min-width: 522px; height: 522px; background: url(../images/circle.svg) no-repeat center center/contain; margin-right: 82px; }
 
 .services__image > img { position: absolute; top: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
 
