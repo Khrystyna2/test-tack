@@ -1,0 +1,36 @@
+/*
+================================================================================
+|                                     FOOTER                                   |
+================================================================================
+*/
+.footer {
+	padding: 88px 0 62px;
+	background: $bg-dark;
+	text-align: center;
+	.logo {
+		display: inline-block;
+		width: 249px;
+		margin-bottom: 124px;
+	}
+	p {
+		font-size: $base-fs - 2px;
+		color: #777777;
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.footer {
+		.logo {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+@media only screen and (max-width: 575.8px) {
+	.footer {
+		padding: 40px;
+		.logo {
+			width: 200px;
+		}
+	}
+}

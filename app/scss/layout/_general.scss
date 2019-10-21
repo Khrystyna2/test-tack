@@ -1,0 +1,109 @@
+/*
+================================================================================
+|                                 GENERAL STYLE                                |
+================================================================================
+*/
+
+body {
+	margin: 0;
+	position: relative;
+	background-color: $base-bg;
+	height: 100%;
+	font-family: $base-font-family;
+	font-size: $base-fs !important;
+	line-height: $base-line-height;
+	font-weight: 400;
+	letter-spacing: 0.2px;
+	color: $base-text-color;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: $second-font-family;
+	font-size: $base-fs + 2px;
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.btn-green {
+	width: 100%;
+	max-width: 172px;
+	height: 54px;
+	@include radius(27px);
+	background-color: $button-green;
+	line-height: 22px;
+	letter-spacing: 0.1px;
+	color: #f4fbf6;
+}
+
+.btn-border-green {
+	width: 100%;
+	max-width: 208px;
+	height: 54px;
+	color: $text-green;
+	border: 2px solid $border-green;
+	@include radius(28px);
+	img {
+		margin: 2px 0 0 16px;
+	}
+	&:hover {
+		color: $text-green;
+	}
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.subtitle-section {
+	color: $title-color;
+	font-size: $font-size-h3;
+	line-height: $line-height-h3;
+	font-weight: 800;
+}
+
+@media only screen and (max-width: 1023px) {
+	.subtitle-section {
+		font-size: $font-size-h3 - 8px;
+		line-height: $line-height-h3 - 8px;
+	}
+}
+
+@media only screen and (max-width: 575.8px) {
+	.subtitle-section {
+		font-size: 24px;
+		line-height: 24px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.wrapper {
+		max-width: 980px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.wrapper {
+		max-width: 1170px;
+	}
+}

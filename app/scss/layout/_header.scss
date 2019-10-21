@@ -1,0 +1,151 @@
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	z-index: 10;
+	padding: 26px 0;
+	@include transition(0.4s);
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $text-color-white;
+	}
+	.logo {
+		width: 170px;
+	}
+	&.animated {
+		background-color: $bg-dark;
+	}
+}
+
+.menu {
+	display: flex;
+	font-weight: 600;
+	font-size: $base-fs - 2px;
+	line-height: $base-line-height;
+	letter-spacing: 0.2px;
+	&__item {
+		margin-left: 60px;
+		&:first-of-type {
+			margin-left: 0;
+		}
+		a {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				width: 0;
+				border-bottom: 1px solid #fff;
+				@include transition(width 0.4s);
+			}
+			&.active {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.header {
+		padding: 18px 0;
+		.logo {
+			width: 150px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.header {
+		padding: 0;
+		&__nav {
+			height: 70px;
+		}
+	}
+	.menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: center;
+		padding: 60px 0 20px;
+		background-color: $bg-dark;
+		width: 240px;
+		display: block;
+		opacity: 0;
+		@include transform(translateX(100%));
+		@include transition(0.3s ease);
+		&.open {
+			opacity: 1;
+			@include transform(translateX(0));
+		}
+		&__btn {
+			position: relative;
+			margin: 16px 0 0 20px;
+			height: 17px;
+			width: 23px;
+			background: transparent;
+			cursor: pointer;
+			z-index: 100;
+			> span {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background-color: $base-bg;
+				&::after,
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 50%;
+					margin-top: -2px;
+					left: 0;
+					width: 100%;
+					height: 3px;
+					background-color: $base-bg;
+					@include transition(transform 0.4s);
+				}
+				&::after {
+					@include transform(translateY(-6px));
+				}
+				&::before {
+					@include transform(translateY(7px));
+				}
+			}
+
+			&.active {
+				> span {
+					height: 0;
+					&::after {
+						@include transform(rotate(-42deg));
+					}
+					&::before {
+						@include transform(rotate(42deg));
+					}
+				}
+			}
+		}
+		&__item {
+			margin: 0 0 20px 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 767.8px) {
+}
+
+@media only screen and (max-width: 575.8px) {
+}

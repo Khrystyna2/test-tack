@@ -1,0 +1,54 @@
+@mixin transition($property) {
+	transition: $property;
+	-webkit-transition: $property;
+	-moz-transition: $property;
+	-ms-transition: $property;
+	-o-transition: $property;
+}
+
+@mixin radius($border-radius) {
+	border-radius: $border-radius;
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	-ms-border-radius: $border-radius;
+	-o-border-radius: $border-radius;
+}
+
+@mixin transform($transform) {
+	transform: $transform;
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+}
+
+@mixin gradient($aside, $aside-invert, $color1, $color2) {
+	background: -moz-linear-gradient($aside, $color1 0%, $color2 100%);
+	background: -webkit-linear-gradient($aside, $color1 0%, $color2 100%);
+	background: -o-linear-gradient($aside, $color1 0%, $color2 100%);
+	background: -ms-linear-gradient($aside, $color1 0%, $color2 100%);
+	background: linear-gradient(to $aside-invert, $color1 0%, $color2 100%);
+}
+
+@mixin font($font-s, $font-h, $font-c, $font-w) {
+	font-size: $font-s;
+	line-height: $font-h;
+	color: $font-c;
+	font-weight: $font-w;
+}
+
+@mixin circle-image($wight, $height) {
+	width: $wight;
+	height: $height;
+	@include radius(50%);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	> img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
